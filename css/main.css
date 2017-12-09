@@ -1,0 +1,61 @@
+ol {
+    padding-left: 40px;
+}
+
+.snow-switcher-extension {
+    display: flex;
+    flex-direction: row;
+    padding-left: 27px;
+}
+
+.snow-switcher-extension .snow-switcher-text {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.snow-switcher-extension > label {
+    box-sizing: border-box;
+    display: block;
+    border-radius: 10px;
+    height: 20px;
+    width: 40px;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.snow-switcher-extension > label > input {
+    display: none;
+}
+
+.snow-switcher-extension > label > span.circle {
+    content: '';
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    top: 2px;
+    left: 2px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: all 0.4s;
+}
+
+.snow-switcher-extension > label > span.background {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #7d7e82;
+    transition: all 0.4s;
+}
+
+.snow-switcher-extension > label > input:checked + span.circle {
+      left: 22px;
+}
+
+.snow-switcher-extension > label > input:checked ~ span.background {
+      background-color: #049204;
+}
+

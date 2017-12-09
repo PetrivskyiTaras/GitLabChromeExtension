@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Git Lab extension",
+  "description": "This extension modify Git Lab pages.",
+  "version": "1.0",
+  "author": "T.Petrivskyi",
+
+  "browser_action": {
+    "default_icon": "/images/icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://git.devops-int.avid.com/*"],
+      "js": ["background.js", "snow.js"],
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "scripts": ["background.js", "snow.js"]
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
